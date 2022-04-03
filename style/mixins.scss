@@ -3,9 +3,9 @@
     font-size: $fontsize;
     margin-bottom: $margin;
 }
-@mixin blockbg($bg, $filter, $radius, $padding){
+@mixin blockbg($bg, $radius, $padding){
     background: $bg;
-    backdrop-filter: blur($filter);
+    // backdrop-filter: blur($filter);
     border-radius: $radius;
     padding: $padding;
 }
