@@ -1,0 +1,11 @@
+@mixin fortext($colortext, $fontsize, $margin){
+    color: $colortext;
+    font-size: $fontsize;
+    margin-bottom: $margin;
+}
+@mixin blockbg($bg, $filter, $radius, $padding){
+    background: $bg;
+    backdrop-filter: blur($filter);
+    border-radius: $radius;
+    padding: $padding;
+}
