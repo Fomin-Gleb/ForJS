@@ -372,6 +372,11 @@ body {
   padding: 0 50px;
 }
 
+@media (max-width: 450px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 header {
   position: relative;
   height: 100vh;
@@ -468,7 +473,7 @@ header nav .nav-burgmenu-submenu li a {
 header nav .nav-burgmenu-submenu li a:hover {
   border: 1px solid #ff9900;
 }
-:hover header nav .nav-burgmenu-submenu {
+header nav .nav-burgmenu :hover .nav-burgmenu-submenu {
   display: block;
 }
 @media (max-width: 995px) {
@@ -533,8 +538,6 @@ header .signin {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 7px;
   padding: 50px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 header .signin h2 {
   color: white;
@@ -604,6 +607,63 @@ header .signin-reg a {
   color: white;
   font-size: 13px;
   margin-bottom: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 5px;
+}
+@media (max-width: 400px) {
+  header .signin .signin {
+    padding: 15px;
+  }
+  header .signin-content {
+    margin-bottom: 20px;
+  }
+  header .signin-content ::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  header .signin-content ::-moz-placeholder {
+    font-size: 13px;
+  }
+  header .signin-content :-ms-input-placeholder {
+    font-size: 13px;
+  }
+  header .signin-content ::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  header .signin-content ::placeholder {
+    font-size: 13px;
+  }
+  header .signin-content input {
+    width: 84%;
+  }
+  header .signin-click {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .signin-click button {
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0);
+    color: #ebebeb;
+  }
+}
+@media (max-width: 400px) {
+  header .signin {
+    padding: 15px;
+  }
 }
 header .signup {
   margin: 0 auto;
@@ -612,8 +672,6 @@ header .signup {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 7px;
   padding: 50px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 header .signup h2 {
   color: white;
@@ -676,4 +734,55 @@ header .signup-click button:hover {
   border-radius: 8px;
   background: #ff9900;
   color: black;
+}
+@media (max-width: 585px) {
+  header .signup h2 {
+    font-size: 25px;
+  }
+  header .signup-content ::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  header .signup-content ::-moz-placeholder {
+    font-size: 13px;
+  }
+  header .signup-content :-ms-input-placeholder {
+    font-size: 13px;
+  }
+  header .signup-content ::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  header .signup-content ::placeholder {
+    font-size: 13px;
+  }
+  header .signup-content input {
+    width: 85%;
+  }
+  header .signup-click {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .signup-click span {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  header .signup-click button {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 585px) {
+  header .signup {
+    padding: 15px;
+  }
 }

@@ -12,7 +12,11 @@ $textcolor: white;
   margin: 0 auto;
   padding: 0 50px;
 }
-
+@media (max-width: 450px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 header {
   position: relative;
   height: 100vh;
@@ -78,23 +82,22 @@ header {
           box-shadow: 0px 20px 40px rgb(0 0 0 / 25%);
           backdrop-filter: blur(50px);
           border-radius: 10px;
-          li{
+          li {
             margin: 30px 10px;
-            
-            a{
+
+            a {
               padding: 10px 20px;
               border: 1px solid rgba($color: #000000, $alpha: 0);
               border-radius: 5px;
               font-size: 20px;
-              transition: .3s;
+              transition: 0.3s;
             }
-            a:hover{
+            a:hover {
               border: 1px solid rgb(255, 153, 0);
             }
-
           }
         }
-        :hover &-submenu{
+        :hover .nav-burgmenu-submenu {
           display: block;
         }
       }
@@ -132,7 +135,6 @@ header {
       p {
         @include fortext($textcolor, 10px, 0);
       }
-
     }
   }
   @media (max-width: 475px) {
@@ -145,7 +147,7 @@ header {
     max-width: 300px;
     text-align: center;
     @include blockbg(rgba($color: #000000, $alpha: 0.3), 7px, 50px);
-    backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
     h2 {
       @include fortext($textcolor, 34px, 30px);
     }
@@ -178,7 +180,7 @@ header {
           background: rgb(255, 153, 0);
           color: black;
         }
-        border: 1px solid rgb(255, 153, 0);
+        border: 1px solid #ff9900;
         border-radius: 8px;
         padding: 10px 20px;
         margin: 0 10px;
@@ -190,7 +192,42 @@ header {
       a {
         text-decoration: none;
         @include fortext($textcolor, 13px, 0);
+        border-radius: 5px;
+        border: 1px solid rgba($color: #000000, $alpha: 0);
+        transition: 0.3s;
+        padding: 5px;
       }
+    }
+    @media (max-width: 400px) {
+      .signin {
+        padding: 15px;
+      }
+      &-content {
+        margin-bottom: 20px;
+        ::placeholder {
+          font-size: 13px;
+        }
+        input {
+          width: 84%;
+        }
+      }
+      &-click {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          margin-bottom: 15px;
+          background: rgba($color: #000000, $alpha: 0);
+          color: rgb(235, 235, 235);
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .signin {
+      padding: 15px;
     }
   }
   .signup {
@@ -198,7 +235,7 @@ header {
     max-width: 400px;
     text-align: center;
     @include blockbg(rgba($color: #000000, $alpha: 0.3), 7px, 50px);
-    backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
     h2 {
       @include fortext($textcolor, 34px, 30px);
     }
@@ -237,6 +274,36 @@ header {
         background: rgba($color: #000000, $alpha: 0);
         color: rgb(235, 235, 235);
       }
+    }
+    @media (max-width: 585px) {
+      h2 {
+        font-size: 25px;
+      }
+      &-content {
+        ::placeholder {
+          font-size: 13px;
+        }
+        input {
+          width: 85%;
+        }
+      }
+      &-click {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          @include fortext($textcolor, 13px, 0);
+        }
+        button {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  @media (max-width: 585px) {
+    .signup {
+      padding: 15px;
     }
   }
 }
