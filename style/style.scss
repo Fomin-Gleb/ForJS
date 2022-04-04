@@ -10,7 +10,7 @@ $textcolor: white;
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 50px;
 }
 @media (max-width: 450px) {
   .container {
@@ -19,8 +19,8 @@ $textcolor: white;
 }
 header {
   position: relative;
-  height: 100vh;
-
+  height: 100%;
+  min-height: 100vh;
   .bg-video {
     position: absolute;
     left: 0;
@@ -36,6 +36,16 @@ header {
       transform: translate(-50%, -50%);
       min-width: 100%;
       min-height: 100%;
+    }
+  }
+  .bg-photo {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 995px) {
+    .bg-video {
+      display: none;
     }
   }
   nav {
@@ -111,6 +121,11 @@ header {
       }
     }
   }
+  @media (max-height: 740px) {
+    nav {
+      margin-bottom: 30px;
+    }
+  }
   .banner {
     text-align: center;
     @include blockbg(rgba($color: #000000, $alpha: 0.3), 7px, 50px);
@@ -144,6 +159,7 @@ header {
   }
   .signin {
     margin: 0 auto;
+
     max-width: 300px;
     text-align: center;
     @include blockbg(rgba($color: #000000, $alpha: 0.3), 7px, 50px);
@@ -305,5 +321,14 @@ header {
     .signup {
       padding: 15px;
     }
+  }
+}
+@media (max-width: 995px) {
+  header {
+    // height: 100%;
+    background: url(../img-video/music.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
   }
 }
