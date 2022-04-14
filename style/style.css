@@ -411,7 +411,7 @@ header .bg-photo {
   }
 }
 header nav {
-  margin-bottom: 150px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
